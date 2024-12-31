@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <h2>Our Toy Collection</h2>
+  <p>Discover toys that align with your child's developmental stages and interests.</p>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let toy of toys">
+      <div class="card">
+        <img [src]="toy.image" class="card-img-top" [alt]="toy.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ toy.name }}</h5>
+          <p class="card-text">{{ toy.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
