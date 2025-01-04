@@ -8,3 +8,12 @@
   position: fixed;
   z-index: -1;
 }
+
+.logo {
+  transition: transform 0.2s;
+  border-radius: 8px;
+}
+
+.logo:hover {
+  transform: translateY(-5px);
+}
