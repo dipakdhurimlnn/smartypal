@@ -8,3 +8,12 @@
   position: fixed;
   z-index: -1;
 }
+
+.swipe-area {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+}

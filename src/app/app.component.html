@@ -1,3 +1,5 @@
-<div class="pages-bg overflow-auto">
+<div class="pages-bg overflow-auto swipe-area" (touchstart)="onTouchStart($event)"
+     (touchend)="onTouchEnd($event)"
+>
   <router-outlet></router-outlet>
 </div>
