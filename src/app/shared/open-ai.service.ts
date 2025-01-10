@@ -13,7 +13,7 @@ export class OpenAiService {
 
   sendMessage(messages: { role: string; content: string }[]): Observable<any> {
     const body = {
-      model: 'gpt-4',
+      model: 'gpt-3.5-turbo',
       messages: messages,
     };
 
