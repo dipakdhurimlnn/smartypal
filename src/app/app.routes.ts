@@ -8,6 +8,7 @@ import {HomeComponent} from './components/home/home.component';
 import {PagePhysicalComponent} from './components/physical/page-physical/page-physical.component';
 import {PageMentalComponent} from './components/mental/page-mental/page-mental.component';
 import {PageEventsComponent} from './components/events/page-events/page-events.component';
+import {ChatComponent} from './shared/chat/chat.component';
 
 export const routes: Routes = [{path: '', component: LandingPageComponent},
   {path: 'home', component: HomeComponent},
@@ -17,4 +18,4 @@ export const routes: Routes = [{path: '', component: LandingPageComponent},
   {path: 'events', component: PageEventsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'recommendation', component: RecommendationComponent},
-  {path: 'contact', component: ContactComponent},];
+  {path: 'contact', component: ContactComponent}, {path: 'chat', component: ChatComponent},];

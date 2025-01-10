@@ -1,0 +1,28 @@
+<div class="chat-container">
+  <div class="messages">
+    <div
+      *ngFor="let message of messages"
+      [ngClass]="{ user: message.role === 'user', assistant: message.role === 'assistant' }"
+    >
+      <strong *ngIf="message.role === 'user'">You:</strong>
+      <strong *ngIf="message.role === 'assistant'">AI:</strong>
+      <span>{{ message.content }}</span>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <input
+      type="text"
+      [(ngModel)]="userMessage"
+      [disabled]="isLoading"
+      placeholder="Type your message..."
+    />
+    <button (click)="sendMessage()" [disabled]="isLoading || !userMessage.trim()">
+      Send
+    </button>
+  </div>
+
+  <div *ngIf="isLoading" class="loading">
+    Loading...
+  </div>
+</div>
