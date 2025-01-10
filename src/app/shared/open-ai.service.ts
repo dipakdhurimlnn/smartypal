@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root',
 })
 export class OpenAiService {
-  private backendUrl = 'https://smartypal-backend.vercel.app//api/openai'; // Backend URL
+  private backendUrl = 'https://smartypal-backend.vercel.app/api/openai'; // Backend URL
 
   constructor(private http: HttpClient) {
   }
