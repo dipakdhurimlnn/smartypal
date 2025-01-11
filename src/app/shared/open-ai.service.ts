@@ -6,15 +6,14 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root',
 })
 export class OpenAiService {
-  private backendUrl = 'https://smartypal-backend.vercel.app/api/openai'; // Backend URL
+  private backendUrl = 'https://smartypal-backend.vercel.app/generate-content'; // Backend URL
 
   constructor(private http: HttpClient) {
   }
 
-  sendMessage(messages: { role: string; content: string }[]): Observable<any> {
+  sendMessage(message: string): Observable<any> {
     const body = {
-      model: 'gpt-3.5-turbo',
-      messages: messages,
+      prompt: message,
     };
 
     return this.http.post(this.backendUrl, body);
